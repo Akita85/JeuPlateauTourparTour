@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jeu de plateau Tour par Tour</title>
+	<link rel="icon" href="img/logo/fevicon.png" type="image/png">
+  
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+  <!-- Custom styles -->
+  	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--================Barre navigation start =================-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand logo_h" href="#"><img src="img/logo/logo.png" alt="logo" width="20%"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02" >
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#presentation">Présentation <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#regle_jeu">Règles du jeu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#zone_jeu">Jeu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#personnage_arme">Personnages et armes</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+      <!--================Barre navigation end =================-->
+
+    <!--================Presentation start =================-->
+  <section id="presentation">
+  <div class="container">
+            <h2 class="text-center">PRESENTATION <br/> 
+              <img src="img/fond/dragonSilhouette.png" alt="dragon" width="5%">
+            </h2>
+            <div class="row">
+                <div class="welcome_text"></div>
+            </div>
+            <div class="welcome_inner row">
+                <div class="col-lg-6">
+                  <div class="welcome_text">
+                    <h3 class="text-center">Synopsis</h3>
+                    <p>Neuf familles nobles rivalisent pour le contrôle du Trône de Fer dans les sept royaumes de Westeros. Pendant ce temps, des anciennes créatures mythiques oubliées reviennent pour faire des ravages.</p>
+                    <p>Il s'agit de l'adaptation de la série de romans écrits par George R. R. Martin depuis 1996, saga réputée pour son réalisme et par ses nombreuses inspirations tirées d’événements, lieux et personnages historiques réels, tels que la guerre des Deux-Roses, le mur d'Hadrien ou Henri Tudor.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="welcome_text">
+                    <h3 class="text-center">But du jeu</h3>
+                    <p>Guidez Jon Snow et écrasez l'ennemi. Vous avez le droit de revendiquer le Trône de Fer. </p>
+                    <p>Prenez les armes et défaites le roi de la nuit afin de sauver Westeros.</p>
+                    <p class="text-center">IL NE RESTERA QU'UN SEUL SURVIVANT !</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Presentation End =================-->
+
+    <!--================Regles Jeu start =================-->
+    <section id="regle_jeu">
+      <div class="container">
+        <h2 class="text-center">REGLES DU JEU <br/>
+          <img src="img/fond/dragonSilhouette.png" alt="dragon" width="5%">
+        </h2>
+        <p>A chaque tour, un joueur peut se déplacer d’une à trois cases (horizontalement ou verticalement) avant de terminer son tour. Il ne peut évidemment pas passer à travers un obstacle (case noire).
+        Si un joueur passe sur une case contenant une arme, il laisse son arme actuelle (celle par défaut infligeant 10 points de dégâts) sur place et la remplace par la nouvelle.
+        Si les joueurs se croisent sur des cases adjacentes (horizontalement ou verticalement), un combat à mort s’engage.</p>
+
+        <p>Lors d'un combat :
+        Chacun attaque à son tour.
+        Les dégâts infligés dépendent de l’arme possédée par le joueur.
+        Le joueur peut choisir d’attaquer ou de se défendre contre le prochain coup.
+        Lorsque le joueur se défend, il encaisse 50% de dégâts en moins qu’en temps normal.
+        Dès que les points de vie d’un joueur (initialement à 100) tombent à 0 , celui-ci a perdu.</p>
+      </div>
+    </section>
+    <!--================Regles Jeu End =================-->
+
+    <!--================Jeu start =================-->
+    <section id="zone_jeu">
+        <h2 class="text-center">JEU<br/>
+          <img src="img/fond/dragonSilhouette.png" alt="dragon" width="5%">
+        </h2>
+
+        <div class="row"> 
+          <div class="col-lg-3 text-center">
+            <h5>JON SNOW</h5>
+              <img src="img/joueur/jonSnow2.png" alt="jonSnow" width="35%"> <br/>
+              <div class="jumbotron"> 
+                <div class="message1" style='display: none;'>Jon Snow, c'est à toi de jouer !</div>
+                <p>Points de Vie : <span id="pdv_joueur1"></span></p>
+                <p>Arme : <span id="arme_joueur1"></span></p>
+                <p>Dégâts : <span id="degats_joueur1"></span></p>
+              </div>
+          </div>
+
+              <div class="col-lg-6 text-center" id="jeu"></div>    
+              
+
+          <div class="col-lg-3 text-center">
+            <h5>ROI DE LA NUIT</h5>
+              <img src="img/joueur/roiNuit2.png" alt="RoiDeLaNuit" width="50%"> <br/>
+              <div class="jumbotron"> 
+                <div class="message2" style='display: none;'>Roi de la Nuit, c'est à toi de jouer !</div>
+                <p>Points de Vie : <span id="pdv_joueur2"></span></p>
+                <p>Arme : <span id="arme_joueur2"></span></p>
+                <p>Dégâts : <span id="degats_joueur2"></span></p>
+              </div>
+          </div>
+        </div>    
+    </section>
+    <!--================ Jeu End =================-->
+
+    <!--================Personnage et armes start =================-->
+    <section id="personnage_arme">
+      <div class="container"> 
+        <h2 class="text-center">PERSONNAGES ET ARMES<br/>
+          <img src="img/fond/dragonSilhouette.png" alt="dragon" width="5%">
+        </h2>
+
+      <h3 class="text-center">Personnages</h3>
+        <div class="row">
+          <div class="col-lg-3 text-center"> 
+            <img src="img/joueur/jonSnow.png" alt="jonSnow" width="40%">    
+          </div>
+          <div class="col-lg-3">
+            <h4>Jon Snow :</h4>
+            <p>Il est désigné comme étant le fils illégitime de lord Eddard Stark et d'une femme inconnue. Né en l'an 283, c'est un jeune garçon âgé de quatorze ans au début de la saga qui possède la plupart des caractéristiques physiques des Stark. Jon est accompagné d'un loup géant blanc, un albinos du nom de Fantôme. Les circonstances de la naissance de Jon restent cependant entourées de mystère, ainsi que l'identité réelle de sa mère. </p>
+            <p>Son arme principale : épée en acier valyrien, Grand-Griffe.</p>
+          </div>
+
+          <div class="col-lg-3 text-center">
+            <img src="img/joueur/roiNuit.png" alt="jonSnow" width="40%">    
+          </div>
+          <div class="col-lg-3">
+            <h4> Le Roi de la Nuit : </h4>
+            <p> Il est le premier Marcheur blanc créé par les Enfants de la forêt entre -12 000 et -10 000. Il se détourne de ces derniers avec l'appui de ses frères. Il entreprend d'anéantir toutes formes de vie grâce à l'Armée des morts qu'il dirige. Pour cela, il entame une marche depuis les Contrées de l'éternel hiver vers le sud de Westeros.
+            </p>
+            <p>Son arme principale : Lame de Glace.</p>
+          </div>
+        </div>
+
+      <h3 class="text-center">Armes</h3>
+        <div class="row">
+          <div class="col-lg-3 text-center"> 
+            <img src="img/arme/grandGriffe.png" alt="grandGriffe" width="30%">    
+          </div>
+          <div class="col-lg-3">
+            <h4>Grand-Griffe :</h4>
+            <p> C'est une épée en acier valyrien. Sur son pommeau, il y avait à l'origine une tête d'ours mais Jeor Mormont l'a fait remplacer par une tête de loup avant de la donner à Jon Snow.<br/>
+            Elle occasionne <span class="bold">10 points de dégâts</span> à son adversaire.</p>
+          </div>
+        
+          <div class="col-lg-3 text-center"> 
+            <img src="img/arme/DagueVerreDragon.png" alt="DagueVerreDragon" width="30%">    
+          </div>
+          <div class="col-lg-3">
+            <h4>Dague VerreDragon :</h4>
+            <p>Le verredragon est une roche volcanique fragile et vitrifiée, communément appelée obsidienne par la plupart des mestres. De couleur noire, aux reflets parfois bleu violacé, ses bords sont tranchants comme un rasoir. Les Autres sont très vulnérables au verredragon : à son contact, ils semblent fondre et disparaissent en quelques secondes. <br/>
+            Elle occasionne <span class="bold">40 points de dégâts</span> à son adversaire.</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-3 text-center"> 
+            <img src="img/arme/drogon.png" alt="Drogon" width="30%">    
+          </div>
+          <div class="col-lg-3">
+            <h4> Drogon :</h4>
+            <p>Il est l'un des trois dragons nés dans la Mer Dothrak, plaine d'Essos ainsi surnommée pour son étendue. Il est nommé d'après Drogo, le mari décédé de Daenerys Targaryen. Il se distingue par ses écailles noires et ses ailes rougeâtres. Il est le plus grand et le plus féroce de la portée, il semble être le plus puissant des trois Dragons. <br/>
+            Il occasionne <span class="bold">60 points de dégâts</span> à son adversaire. </p>
+          </div>
+        
+          <div class="col-lg-3 text-center"> 
+            <img src="img/arme/lameGlace.png" alt="lameGlace" width="30%">    
+          </div>
+          <div class="col-lg-3">
+            <h4> Lame de Glace :</h4>
+            <p>À première vue, elle est constituée en une matière de glace capable de détruire l'acier et le bronze qui se brisent à son contact. <br/>
+            Elle occasionne <span class="bold">10 points de dégâts</span> à son adversaire. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================Personnages et armes end =================-->
+
+    <!--================ Javascript start =================-->
+    <script src="js/jQuery.js" type="text/javascript"></script>
+    <script src="js/arme.js" type="text/javascript"></script>
+    <script src="js/joueur.js" type="text/javascript"></script>
+    <script src='js/map.js' type='text/javascript'></script>
+    <script src="js/murGlace.js" type="text/javascript"></script>
+    <script src="js/cellule.js" type="text/javascript"></script>
+    <script src='js/jeu.js' type='text/javascript'></script>
+    <!--================ Javascript end =================-->
+
+  </body>
+</html>

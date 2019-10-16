@@ -1,0 +1,199 @@
+body
+{
+	color: white;
+}
+
+h2
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+h3
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #7DBBD3;
+}
+
+h4
+{
+	padding-top: 15px;
+}
+
+h5
+{
+	margin-top: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-right: 100px;
+	margin-left: 100px;
+	border-radius: 5px;
+	background-color: #7DBBD3;
+}
+
+p
+{
+	text-align: justify;
+}
+
+td
+{
+	background-color: #f5f5f5;
+}
+
+.murGlace
+{
+	background: url(img/fond/murGlace.jpg) center no-repeat;
+}
+
+.joueur1
+{
+	background-size:35px !important;
+	background: url(img/joueur/jonSnowItem.png) center no-repeat;
+	background-color: #f5f5f5;
+	z-index: 10;
+}
+
+.joueur2
+{
+	background-size:35px !important;
+	background: url(img/joueur/roiNuitItem.png) center no-repeat;
+	background-color: #f5f5f5;
+	z-index: 10;
+}
+
+.arme1
+{
+	background-size:40px !important;
+	background: url(img/arme/grandGriffe.png) center no-repeat;
+	background-color: #f5f5f5;
+	z-index: 20;
+}
+
+.arme2
+{
+	background-size:40px !important;
+	background: url(img/arme/DagueVerreDragon.png) center no-repeat;
+	background-color: #f5f5f5;
+	z-index: 20;
+}
+
+.arme3
+{
+	background-size:25px !important;
+	background: url(img/arme/drogon.png) center no-repeat;
+	background-color: #f5f5f5;
+	z-index: 20;
+}
+
+.arme4
+{
+	background-size:40px !important;
+	background: url(img/arme/lameGlace.png) center no-repeat;
+	background-color: #f5f5f5;
+	z-index: 20;
+}
+
+.jumbotron
+{
+	margin-top: 15px;
+	padding-top: 10px;
+	margin-right: 50px;
+	margin-left: 50px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	background-color: #7DBBD3; 
+	font-weight: bold; 
+}
+
+.message1
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 16px;
+	color: #7DBBD3;
+	border: 1px white solid;
+	margin-bottom: 20px;
+	background-color: white;
+}
+
+.message2
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 16px;
+	color: #7DBBD3;
+	border: 1px white solid;
+	margin-bottom: 20px;
+	background-color: white;
+}
+
+.playButtons
+{
+	background: url(img/fond/murGlace.jpg) center no-repeat;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 15px 30px 15px 30px;
+}
+
+.surbrillance
+{
+	height:60px;
+  	width:60px;
+  	box-shadow: #7DBBD3 0px 0px 10px 3px inset;
+}
+.surbrillance:hover
+{
+	background-color: #D4F0FF;
+}
+
+#presentation
+{
+	position:relative;
+	padding:40px 0;
+	background: url(img/fond/fondPresentation.png)left center no-repeat;
+	background-size:cover
+}
+
+#regle_jeu
+{
+	position:relative;
+	padding:30px 0;
+	background-color: black;
+	background-size:cover
+}
+
+#jeu
+{
+	display: block;
+}
+
+#zone_jeu
+{
+	position:relative;
+	padding:70px 0;
+	background: url(img/fond/jeu.jpg)left center no-repeat;
+	background-size:cover
+}
+
+#buttonsZone
+{
+	margin-top: 15px;
+}
+
+#personnage_arme
+{
+	position:relative;padding:70px 0;
+	background: url(img/fond/descriptif.jpg)left center no-repeat;
+	background-size:cover
+}
+
+.bold
+{
+	font-weight: bold;
+	color: #7DBBD3;
+}
