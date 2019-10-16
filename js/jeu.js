@@ -2,21 +2,21 @@
 
 class jeu 
 {
-    constructor()
+    constructor(line, colonne)
     {
-        this.plateauJeu = new map(10, 10); /* initialisation de mon plateau de jeu en 10x10 */
+        this.plateauJeu = new map(line, colonne); /* initialisation de mon plateau de jeu en 10x10 */
         this.joueurActuel = joueur2;
         this.ennemi = joueur1;
         this.finDuJeu = false;
         this.modeCombat = false;
         this.tourParTour();
         this.deplacementJoueur();
-       $("#attaque").click(() => {
-        this.attaquer();
-       });
-       $("#defendre").click(() => {
-        this.defendre();
-       });
+        $("#attaque").click(() => {
+            this.attaquer();
+        });
+        $("#defendre").click(() => {
+            this.defendre();
+        });
     }
 
     /* Gestion du tour par tour entre les joueurs */
@@ -214,4 +214,4 @@ class jeu
     }
 }
 
-const jeuEnCours = new jeu();
+const jeuEnCours = new jeu(100,100);

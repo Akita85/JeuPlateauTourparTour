@@ -40,7 +40,7 @@ class map
         let jeu = document.getElementById("jeu");
         let table = document.createElement("table");
         $(function() {
-            $('table').addClass('table table-bordered');
+            $('table').addClass('table');
         })
         let tableBody = document.createElement("tbody");
 
