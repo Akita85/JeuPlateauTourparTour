@@ -68,8 +68,6 @@ class map
 
                 /* on ajoute les noeuds "td" (celulles) aux noeuds parents "tr" (lignes) */
                 ligne.appendChild(cellule);
-                cellule.height = '60';
-                cellule.width = '60';
             }
             /* on ajoute les noeuds "tr" (lignes) au noeud parent "tbody" */
             tableBody.appendChild(ligne);

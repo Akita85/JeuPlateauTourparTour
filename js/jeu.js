@@ -4,7 +4,7 @@ class jeu
 {
     constructor()
     {
-        this.plateauJeu = new map(10, 40); /* initialisation de mon plateau de jeu en 10x10 */
+        this.plateauJeu = new map(10, 10); /* initialisation de mon plateau de jeu en 10x10 */
         this.joueurActuel = joueur2;
         this.ennemi = joueur1;
         this.finDuJeu = false;
