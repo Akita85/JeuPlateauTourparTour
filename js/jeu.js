@@ -2,9 +2,9 @@
 
 class jeu 
 {
-    constructor(line, colonne)
+    constructor(ligne, colonne)
     {
-        this.plateauJeu = new map(line, colonne); /* initialisation de mon plateau de jeu en 10x10 */
+        this.plateauJeu = new map(ligne, colonne); /* initialisation de mon plateau de jeu */
         this.joueurActuel = joueur2;
         this.ennemi = joueur1;
         this.finDuJeu = false;
@@ -214,4 +214,4 @@ class jeu
     }
 }
 
-const jeuEnCours = new jeu(100,100);
+const partie = new jeu(10, 10);
